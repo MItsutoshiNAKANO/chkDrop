@@ -15,6 +15,30 @@ namespace ChkDrop
         private const string TARG = "target";
         private const string OBJ = "obj";
    
+        private class Info {
+            public string Str {  get;  set; }
+        }
+
+        private const int MAX_INFO = 2;
+        private const int MAX_INFOS = 2;
+
+
+        private List<List<Info>> GetInfos()
+        {
+            List<List<Info>> ans = new List<List<Info>>();
+            for (int i =0; i < MAX_INFOS; ++i)
+            {
+                List<Info> infos = new List<Info>();
+                for (int j = 0; j < MAX_INFO; ++i)
+                {
+                    Info inf = new Info();
+                    inf.Str = i + "_" + j;
+                }
+
+            }
+            return ans;
+        }
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
