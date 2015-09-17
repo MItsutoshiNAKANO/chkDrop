@@ -42,14 +42,6 @@
                             </tr>
                         </thead>
                         <tbody runat="server" id="TableBody">
-                            <tr runat="server" id="Line1">
-                                <td runat="server" id="p1_1" class="DropBody"><span runat="server" id="o1_1" class="DragBody">1_1</span></td>
-                                <td runat="server" id="p2_1" class="DropBody"><span runat="server" id="o2_1" class="DragBody">2_1</span></td>
-                            </tr>
-                            <tr runat="server" id="Line2">
-                                <td runat="server" id="p1_2" class="DropBody"><span runat="server" id="o1_2" class="DragBody">1_2</span></td>
-                                <td runat="server" id="p2_2" class="DropBody"><span runat="server" id="o2_2" class="DragBody">2_2</span></td>
-                            </tr>
                         </tbody>
                     </table>
                     <asp:HiddenField runat="server" ID="Target"/>
