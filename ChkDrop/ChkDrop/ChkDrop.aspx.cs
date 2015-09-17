@@ -23,7 +23,7 @@ namespace ChkDrop
         private const int MAX_INFOS = 3;
 
 
-        private List<List<Info>> GetInfos()
+        private List<List<Info>> MkInfos()
         {
             List<List<Info>> ans = new List<List<Info>>();
             for (int i = 1; i <= MAX_INFOS; ++i)
@@ -93,13 +93,19 @@ namespace ChkDrop
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                Session["infos"] = MkInfos();
+                MkTbBody((List<List<Info>>) Session["infos"]);
+                return;
+            }
             string target = Request.Form[TARG];
             string obj = Request.Form[OBJ];
             Label1.Text = target + " " + obj;
             //foreach (string  k in Request.Params.Keys) {
             //    Label1.Text = Label1.Text + "<br/>" + k + "=" + Request.Params[k];
             //}
-            MkTbBody(GetInfos());
+            MkTbBody((List<List<Info>>)Session["infos"]);
             return;
 
         }
