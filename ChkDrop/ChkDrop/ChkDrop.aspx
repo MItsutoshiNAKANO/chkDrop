@@ -6,7 +6,6 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>ドラッグドロップ</title>
-    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <style>
         .DragBody {
@@ -24,8 +23,8 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server">
             <Scripts>
-                <asp:ScriptReference Path="~/Scripts/jquery-1.11.3.js" />
-                <asp:ScriptReference Path="~/Scripts/jquery-ui-1.11.4.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-3.3.1.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-ui-1.12.1.js" />
                 <asp:ScriptReference Path="~/Scripts/bootstrap.js" />
             </Scripts>
         </asp:ScriptManager>
@@ -59,7 +58,7 @@
                 accept: ".DragBody",
                 drop: function (event, ui) {
                     var targetID = event.target.id;
-                    var objectID = ui.draggable.context.id;
+                    var objectID = ui.draggable[0].id;
                     console.log(targetID);
                     console.log(objectID);
                     console.log("Event:");
