@@ -1,12 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChkDrop.aspx.cs" Inherits="ChkDrop.ChkDrop" %>
-
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChkDrop.aspx.cs" Inherits="ChkDrop.ChkDrop" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>ドラッグドロップ</title>
-    <link href="Content/bootstrap.css" rel="stylesheet" />
     <style>
         .DragBody {
             border: solid;
@@ -23,9 +21,8 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server">
             <Scripts>
-                <asp:ScriptReference Path="~/Scripts/jquery-3.3.1.js" />
-                <asp:ScriptReference Path="~/Scripts/jquery-ui-1.12.1.js" />
-                <asp:ScriptReference Path="~/Scripts/bootstrap.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-3.7.1.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-ui-1.14.1.js" />
             </Scripts>
         </asp:ScriptManager>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
